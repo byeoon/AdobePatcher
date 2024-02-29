@@ -4,6 +4,8 @@
 #include <string>
 #include <bits/stdc++.h>
 #include <sys/stat.h>
+#include <lib/byrontools.h>
+
 /*
   Adobe Patching Software developed in C++.
   (It probably won't work that well right now..)
