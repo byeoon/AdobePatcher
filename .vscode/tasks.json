@@ -9,7 +9,8 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/out/${fileBasenameNoExtension}"
+                "${fileDirname}/out/${fileBasenameNoExtension}",
+                "-lcurl"
             ],
             "options": {
                 "cwd": "${fileDirname}"
