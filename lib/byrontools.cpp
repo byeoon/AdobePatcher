@@ -4,7 +4,7 @@
 using namespace byrontoolsN;
 using namespace std;
 
-void byrontools::test()
+void byrontools::helloworld()
 {
-    cout << "Doing something!" << endl;
+    cout << "Hello world!" << endl;
 }

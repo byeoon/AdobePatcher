@@ -7,8 +7,8 @@
 #include <lib/byrontools.h>
 
 /*
-  Adobe Patching Software developed in C++.
-  (It probably won't work that well right now..)
+  AdobePatcher developed in C++.
+  (It probably won't work that well right now)
 */
 
 static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
@@ -20,7 +20,7 @@ static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *use
 using namespace std;
 int main(void)
 {
-  printf("\x1B[31m [Adobe Patching Software] \033[0m\t\t");
+  printf("\x1B[31m [AdobePatcher] \033[0m\t\t");
   printf("\n");
 
   ofstream hostsCopy("hostsCopy.txt");
@@ -41,14 +41,15 @@ int main(void)
     curl_easy_cleanup(curl);
 
     hostsCopy << readBuffer << std::endl;
-    printf("\x1B[32m [+] Completed adding urls to the copied hosts file. \033[0m\t\t");
+    printf("\x1B[32m [+] Completed adding urls to the copied host file. \033[0m\t\t");
     printf("\n");
   }
   hostsCopy.close();
 
-  printf("\x1B[31m [~] Merging copied and original hosts files together...  \033[0m\t\t");
+  printf("\x1B[31m [~] Merging copied and original host files together...  \033[0m\t\t");
   printf("\n");
   // PlaySound("", NULL, SND_FILENAME);
+
   if (stat(pathToHosts, &sb) == 0)
   {
     cout << "Path to hosts file exists.";
@@ -63,9 +64,10 @@ int main(void)
     {
       ofile << ifile.rdbuf();
     }
-    string word;
 
+    string word;
     file.open("C:/Windows/System32/drivers/etc/hosts.txt");
+
     while (file >> word)
     {
       printf("\n");
@@ -74,9 +76,11 @@ int main(void)
   }
   else
   {
-    cout << "The hosts path does not exist.";
+    cout << "The path does not exist.";
     printf("\n");
   }
 
+      printf("\n");
+      printf("\x1B[32m [+] Installing other dependencies \033[0m\t\t");
   return 0;
 }
